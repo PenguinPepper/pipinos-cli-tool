@@ -1,10 +1,4 @@
-# Architecture Diagrams
 
-Generated on 3/25/2026
-
-## Project Architecture Overview
-
-```mermaid
 graph TB
     Start[Repository] --> Analysis[Code Analysis]
     Analysis --> Tech[Tech Stack]
@@ -18,13 +12,7 @@ graph TB
     Scripts --> S0[lint]
     Scripts --> S1[lint:fix]
     Scripts --> S2[test]
-```
 
----
-
-## Dependency Graph
-
-```mermaid
 graph LR
     Project[Project]
     Project --> Frameworks[Frameworks]
@@ -36,13 +24,7 @@ graph LR
     Dependencies --> Dep3[content-type]
     Dependencies --> Dep4[cookie]
     Dependencies --> Dep5[cookie-signature]
-```
 
----
-
-## Directory Structure
-
-```mermaid
 graph TD
     Root[Project Root]
     Root --> github[.github/]
