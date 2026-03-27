@@ -2,7 +2,7 @@ Week 1
 - Setup & Foundations
 - [x] Initialize project repo and package.json
 - [x] Configure CLI entry point (#!/usr/bin/env node)
-- [ ] Add basic command handling with Commander.js (e.g., init, generate)
+- [x] Add basic command handling with Commander.js (e.g., init, generate)
 - [ ] Create /studybuddy_docs/ output folder structure
 - Core Functionality
 - [ ] Implement GitHub API integration to fetch README

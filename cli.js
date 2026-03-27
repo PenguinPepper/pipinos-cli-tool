@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import ora from 'ora';
+import { runGenerate } from './commands/generate';
 
 const program = new Command();
 
@@ -13,13 +13,18 @@ program
 program
     .command('generate')
     .description('Generate onboarding materials for repsitory')
-    .argument('[repo-url]', 'Url of the repository you wish to understand')
     .option('-r, --repo <owner/repo>', 'Github repository to scan (defaults to the current directory git remote)')
+    .option('-t, --token <token>', 'Github personal access token')
     .option('-b, --branch <branch>', 'Branch to scan (defaults to default branch)')
     .option('-o', '--output', 'Output diretory for generated files')
-    .action(async (repoUrl, options) => {
+    .action(async (options) => {
         try {
-            console.log('Hre are your files')
+            await runGenerate({
+                repo: options.repo,
+                token: options.token,
+                branch: options.branch,
+                output: options.output,
+            });
         } catch (error) {
             console.error(`${error.message}`)
             process.exit(1)
