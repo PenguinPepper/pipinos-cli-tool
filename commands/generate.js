@@ -2,10 +2,10 @@ import chalk from 'chalk';
 import ora from 'ora';
 import path from 'path';
 import { execSync } from 'child_process';
-import { GitHubClient } from './lib/github.js';
+import { GitHubClient } from './src/lib/github.js';
 import { parseRepo } from './parser/markdown.js';
-import { extract } from './lib/extractor.js';
-import { writeOutputs } from './lib/writer.js';
+import { extract } from './src/lib/extractor.js';
+import { writeOutputs } from './src/lib/writer.js';
 
 
 export async function runGenerate(opts) {
