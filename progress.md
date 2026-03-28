@@ -3,7 +3,7 @@ Week 1
 - [x] Initialize project repo and package.json
 - [x] Configure CLI entry point (#!/usr/bin/env node)
 - [x] Add basic command handling with Commander.js (e.g., init, generate)
-- [ ] Create /studybuddy_docs/ output folder structure
+- [x] Create /pipinos/ output folder structure
 - Core Functionality
 - [ ] Implement GitHub API integration to fetch README
 - [ ] Parse README text and extract key sections
