@@ -14,7 +14,7 @@ export async function runGenerate(opts) {
 
     if (!repoArg) {
         console.error(chalk.red('\n  ✖ No repo specified.'));
-        console.error(chalk.dim('    Run inside a cloned repo, or use: sky generate --repo owner/repo\n'));
+        console.error(chalk.dim('    Run inside a cloned repo, or use: pipinos generate --repo owner/repo\n'));
         process.exit(1);
     }
 
@@ -24,7 +24,7 @@ export async function runGenerate(opts) {
         process.exit(1);
     }
 
-    const outputDir = path.resolve(opts.output ?? './sky');
+    const outputDir = path.resolve(opts.output ?? './pipinos');
 
     const cfg = {
         owner,
@@ -36,7 +36,7 @@ export async function runGenerate(opts) {
 
     // Pipeline 
     console.log('');
-    console.log(chalk.cyan('  ✦ sky') + chalk.dim(' — onboarding, automated'));
+    console.log(chalk.cyan('  ✦ pipinos') + chalk.dim(' — onboarding, automated'));
     console.log('');
 
     // Fetch
@@ -103,7 +103,7 @@ export async function runGenerate(opts) {
     console.log(chalk.dim('  │  ') + chalk.magenta('diagram   ') + chalk.dim(' →  ') + chalk.white(result.diagramPath));
     console.log(chalk.dim('  │  ') + chalk.magenta('cheatsheet') + chalk.dim(' →  ') + chalk.white(result.cheatsheetPath));
     console.log(chalk.dim('  │'));
-    console.log(chalk.dim('  │  ') + chalk.cyan('localhost:4200/sky') + chalk.dim('  (coming soon)'));
+    console.log(chalk.dim('  │  ') + chalk.cyan('localhost:4200/pipinos') + chalk.dim('  (coming soon)'));
     console.log(chalk.dim('  └─────────────────────────────────────────'));
     console.log('');
 }
