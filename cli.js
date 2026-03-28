@@ -31,4 +31,8 @@ program
         }
     })
 
-program.parse();
+program.configureOutput({
+    outputError: (str, write) => write(`\n  ${str}\n`),
+});
+
+program.parseAsync(process.argv);
