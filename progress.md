@@ -5,8 +5,8 @@ Week 1
 - [x] Add basic command handling with Commander.js (e.g., init, generate)
 - [x] Create /pipinos/ output folder structure
 - Core Functionality
-- [ ] Implement GitHub API integration to fetch README
-- [ ] Parse README text and extract key sections
+- [x] Implement GitHub API integration to fetch README
+- [x] Parse README text and extract key sections
 - [ ] Connect Hugging Face summarization model (free tier)
 - [ ] Generate initial flashcards in Markdown format
 
