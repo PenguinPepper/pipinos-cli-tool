@@ -17,6 +17,7 @@ program
     .option('-t, --token <token>', 'Github personal access token')
     .option('-b, --branch <branch>', 'Branch to scan (defaults to default branch)')
     .option('-o', '--output', 'Output diretory for generated files')
+    .option('--ai', 'Enrich output with Ai-powred summaries')
     .action(async (options) => {
         try {
             await runGenerate({
@@ -24,6 +25,7 @@ program
                 token: options.token,
                 branch: options.branch,
                 output: options.output,
+                ai: options.ai ?? false,
             });
         } catch (error) {
             console.error(`${error.message}`)
