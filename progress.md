@@ -7,7 +7,7 @@ Week 1
 - Core Functionality
 - [x] Implement GitHub API integration to fetch README
 - [x] Parse README text and extract key sections
-- [ ] Connect Hugging Face summarization model (free tier)
+- [x] Connect Hugging Face summarization model (free tier)
 - [ ] Generate initial flashcards in Markdown format
 
 Week 2
