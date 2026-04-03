@@ -8,7 +8,7 @@ Week 1
 - [x] Implement GitHub API integration to fetch README
 - [x] Parse README text and extract key sections
 - [x] Connect Hugging Face summarization model (free tier)
-- [ ] Generate initial flashcards in Markdown format
+- [x] Generate initial flashcards in Markdown format
 
 Week 2
 - Enhancements
