@@ -203,21 +203,22 @@ A complete developer reference sheet with install steps, usage examples, depende
 ## Project Structure
 
 ```
-pipinos-cli/
-├── src/
-│   ├── index.js              # CLI entry point (Commander.js)
-│   ├── commands/
-│   │   └── generate.js       # generate command — pipeline orchestrator
-│   ├── lib/
-│   │   ├── github.js         # GitHub API client
-│   │   ├── extractor.js      # Rules-based flashcard/diagram/cheatsheet generator
-│   │   ├── ai.js             # HuggingFace client + AI enrichment
-│   │   └── writer.js         # File output
-│   └── parsers/
-│       └── markdown.js       # README → structured sections parser
-├── .env.example
+pipinos-cli-tool/
+├── commands/
+│   ├── generate.js
+│   ├── parser/
+│   │   └── markdown.js
+│   └── src/
+│       └── lib/
+│           ├── ai.js
+│           ├── extractor.js
+│           ├── github.js
+│           └── writer.js
+├── cli.js
+├── index.js
+├── LICENSE
 ├── package.json
-├── CONTRIBUTING.md
+├── progress.md
 └── README.md
 ```
 
