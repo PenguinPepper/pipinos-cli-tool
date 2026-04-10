@@ -13,7 +13,7 @@
 
 <br />
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Zero Cost](https://img.shields.io/badge/cost-%240-success.svg)](#)
@@ -264,9 +264,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for everything you need to get started.
 
 ## License
 
-Apache License 2.0 — see [LICENSE](LICENSE) for details.
+GNU Affero General Public License v3.0 — see [LICENSE](LICENSE) for details.
 
-You are free to use, modify, and distribute pipinos, including in proprietary software, provided you include the required copyright and license notices.
+pipinos is free software: you can use, modify, and distribute it under the terms of the AGPL-3.0. Any derivative works, including network-accessed software, must also be released under the AGPL-3.0.
 
 ---
 
