@@ -16,7 +16,7 @@ program
     .option('-r, --repo <owner/repo>', 'Github repository to scan (defaults to the current directory git remote)')
     .option('-t, --token <token>', 'Github personal access token')
     .option('-b, --branch <branch>', 'Branch to scan (defaults to default branch)')
-    .option('-o', '--output', 'Output diretory for generated files')
+    .option('-o, --output <dir>', 'Output directory for generated files')
     .option('--ai', 'Enrich output with Ai-powred summaries')
     .action(async (options) => {
         try {
