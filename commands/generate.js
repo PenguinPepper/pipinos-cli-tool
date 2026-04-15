@@ -123,9 +123,8 @@ function inferRepoFromGit() {
         // HTTPS: https://github.com/owner/repo.git
         const https = remote.match(/github\.com\/(.+?)(?:\.git)?$/);
         if (https) return https[1];
-    } catch (error) {
-        console.error(`${error.message}`)
-        process.exit(1)
+    } catch {
+        return null;
     }
     return null;
 }
