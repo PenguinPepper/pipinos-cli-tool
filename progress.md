@@ -12,16 +12,18 @@ Week 1
 
 Week 2
 - Enhancements
-- [ ] Add diagram generation with Mermaid.js (basic flowchart)
-- [ ] Create cheatsheet export (cheatsheet.md) with dependencies + setup steps
-- [ ] Improve CLI UX (colored output, status messages)
+- [x] Add diagram generation with Mermaid.js (basic flowchart)
+- [x] Create cheatsheet export (cheatsheet.md) with dependencies + setup steps
+- [x] Improve CLI UX (colored output, status messages)
 - [ ] Add error handling for missing repos or API limits
 - Testing & Demo Prep
 - [ ] Test on 2–3 open-source repos for accuracy
 - [ ] Polish demo flow (studybuddy generate → instant outputs)
-- [ ] Write README.md for the CLI tool (installation + usage)
+- [x] Write README.md for the CLI tool (installation + usage)
 - [ ] Prepare short pitch/demo script for hackathon presentation
 
-
-
+Tentative
+- [ ] Write tests
+- [ ] Setup Github Actions CI for tests
+- [ ] Increase max number of code files that are scannable
 
