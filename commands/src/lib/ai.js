@@ -6,13 +6,13 @@ const MODELS = {
 const MAX_INPUT_CHARS = 2500;
 
 export class HuggingFaceClient {
-    constuctor(token) {
+    constructor(token) {
         if (!token) {
-            throw Error(
+            throw new Error(
                 'HuggingFace token required. Get a free one at https://huggingface.co/settings/tokens'
             );
         }
-        this.hf = HfInference(token);
+        this.hf = new HfInference(token);
     }
 
     async aiSummary(text, maxLength = 120) {
