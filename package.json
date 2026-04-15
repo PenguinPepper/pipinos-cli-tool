@@ -1,8 +1,11 @@
 {
-  "name": "sky-cli-tool",
+  "name": "pipinos-cli",
   "version": "1.0.0",
-  "description": "A lightweight command-line tool that automatically generates flashcards, cheat sheets, and diagrams from a project’s repository to help  teams onboard quickly.",
-  "main": "index.js",
+  "description": "A lightweight command-line tool that automatically generates flashcards, cheat sheets, and diagrams from a project's repository to help teams onboard quickly.",
+  "main": "cli.js",
+  "bin": {
+    "pipinos": "./cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
