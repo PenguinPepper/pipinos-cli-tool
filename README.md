@@ -88,10 +88,10 @@ pipinos generate --repo owner/repo
 ### Install from source
 
 ```bash
-git clone https://github.com/your-username/pipinos-cli.git
-cd pipinos-cli
+git clone https://github.com/PenguinPepper/pipinos-cli-tool.git
+cd pipinos-cli-tool
 npm install
-node src/index.js generate --repo owner/repo
+node cli.js generate --repo owner/repo
 ```
 
 ---
@@ -251,7 +251,7 @@ Everything pipinos uses is free and open source.
 - [ ] Collaborative editing in the browser UI
 - [ ] Plugin system for custom extractors
 
-See [open issues](https://github.com/your-username/pipinos-cli/issues) to track progress or suggest features.
+See [open issues](https://github.com/PenguinPepper/pipinos-cli-tool/issues) to track progress or suggest features.
 
 ---
 
