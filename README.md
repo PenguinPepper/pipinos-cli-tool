@@ -158,9 +158,14 @@ pipinos uses the GitHub REST API. Without a token you get **60 requests/hour** (
 
 For most repos you won't hit the unauthenticated limit. For large repos or frequent use, set a token:
 
-1. Create a token at [github.com/settings/tokens](https://github.com/settings/tokens) — no special scopes needed for public repos
+1. Create a token at [github.com/settings/tokens](https://github.com/settings/tokens) — no special scopes needed for public repos, the `repo` scope for private ones
 2. Pass it directly: `pipinos generate --repo owner/repo --token ghp_xxx`
 3. Or set it in your environment: `export GITHUB_TOKEN=ghp_xxx`
+4. Or drop it into a `.env` file at the project root (gitignored):
+
+   ```
+   GITHUB_TOKEN=ghp_xxx
+   ```
 
 ---
 
