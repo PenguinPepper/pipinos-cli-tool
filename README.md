@@ -219,12 +219,17 @@ pipinos-cli-tool/
 │           ├── extractor.js
 │           ├── github.js
 │           └── writer.js
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── pull_request_template.md
 ├── cli.js
-├── index.js
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
 ├── LICENSE
 ├── package.json
 ├── progress.md
-└── README.md
+├── README.md
+└── SECURITY.md
 ```
 
 ---
