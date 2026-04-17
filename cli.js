@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import 'dotenv/config';
 import { Command } from 'commander';
 import { runGenerate } from './commands/generate.js';
 
@@ -7,7 +8,7 @@ const program = new Command();
 
 program
     .name('pipinos')
-    .description('A lightweight command-line tool that automatically generates flashcards, cheat sheets, and diagrams from a project’s repository to help  teams onboard quickly.')
+    .description("A lightweight command-line tool that automatically generates flashcards, cheat sheets, and diagrams from a project's repository to help teams onboard quickly.")
     .version('1.0.0');
 
 program
@@ -16,7 +17,7 @@ program
     .option('-r, --repo <owner/repo>', 'Github repository to scan (defaults to the current directory git remote)')
     .option('-t, --token <token>', 'Github personal access token')
     .option('-b, --branch <branch>', 'Branch to scan (defaults to default branch)')
-    .option('-o', '--output', 'Output diretory for generated files')
+    .option('-o, --output <dir>', 'Output directory for generated files')
     .option('--ai', 'Enrich output with Ai-powred summaries')
     .action(async (options) => {
         try {
