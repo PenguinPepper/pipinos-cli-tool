@@ -1,14 +1,16 @@
 import { cleanup, render } from 'cli-testing-library';
 import path from 'path';
-import os from 'os';
 import { describe, it, expect } from '@jest/globals';
-import { exitCode } from 'process';
 
 const cli = path.resolve('./cli.js');
 async function runCli(args = []) {
     try {
-        const { stdout, stderr } = await render('node', [cli, ...args]);
-        return { stdout, stderr };
+        const instance = await render('node', [cli, ...args]);
+        await new Promise((r) => instance.process.on('exit', r));
+        const stdout = instance.stdoutArr.map((e) => e.contents).join('\n');
+        const stderr = instance.stderrArr.map((e) => e.contents).join('\n');
+        const exit = instance.hasExit();
+        return { stdout, stderr, exitCode: exit?.exitCode ?? null };
     }
     finally {
         cleanup();
@@ -17,25 +19,25 @@ async function runCli(args = []) {
 
 describe('test cli', () => {
     it('print version using --version', async () => {
-        const { stdout } = await runCli(['--version']);
+        const { stdout, exitCode } = await runCli(['--version']);
         expect(exitCode).toBe(0);
         expect(stdout.trim()).toMatch(/1\.0\.0/);
     });
 
-    it('print version using -v', async () => {
-        const { stdout } = await runCli(['-v']);
+    it('print version using -V', async () => {
+        const { stdout, exitCode } = await runCli(['-V']);
         expect(exitCode).toBe(0);
         expect(stdout.trim()).toMatch(/1\.0\.0/);
     });
 
     it('print help using --help', async () => {
-        const { stdout } = await runCli(['--help']);
+        const { stdout, exitCode } = await runCli(['--help']);
         expect(exitCode).toBe(0);
         expect(stdout).toMatch(/pipinos/);
     });
 
     it('prints generate help with generate --help', async () => {
-        const { stdout, exitCode } = await runCLI(['generate', '--help']);
+        const { stdout, exitCode } = await runCli(['generate', '--help']);
         expect(exitCode).toBe(0);
         expect(stdout).toMatch(/--repo/);
         expect(stdout).toMatch(/--token/);
