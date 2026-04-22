@@ -7,7 +7,8 @@
     "pipinos": "./cli.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "test:coverage": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +19,6 @@
     "chalk": "^5.6.2",
     "commander": "^14.0.3",
     "dotenv": "^17.3.1",
-    "jest-circus": "^30.3.0",
     "ora": "^9.3.0"
   },
   "devDependencies": {
