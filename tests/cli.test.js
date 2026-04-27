@@ -1,6 +1,7 @@
 import { cleanup, render } from 'cli-testing-library';
 import path from 'path';
 import { describe, it, expect } from '@jest/globals';
+import os from 'os';
 
 const cli = path.resolve('./cli.js');
 async function runCli(args = []) {
@@ -46,4 +47,12 @@ describe('test cli', () => {
         expect(stdout).toMatch(/--ai/);
     });
 
+})
+
+describe('test repo arguments', () => {
+    it('exits when no --repo and no git remote is found', async () => {
+        const { stderr, exitCode } = await runCli(['generate'], { HOME: os.tmpdir() });
+        expect(exitCode).toBe(1);
+        expect(stderr).toMatch(/Failed to fetch repository/i);
+    });
 })
