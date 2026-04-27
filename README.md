@@ -9,7 +9,7 @@
 
 ### Onboarding, automated.
 
-**pipinos reads any GitHub repository and instantly generates flashcards, an architecture diagram, and a cheat sheet — so new developers hit the ground running.**
+**pipinos reads most public GitHub repositories and instantly generates flashcards, an architecture diagram, and a cheat sheet — so new developers hit the ground running.**
 
 <br />
 
