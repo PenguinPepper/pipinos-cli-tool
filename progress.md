@@ -23,7 +23,7 @@ Week 2
 - [ ] Prepare short pitch/demo script for hackathon presentation
 
 Tentative
-- [ ] Write tests
-- [ ] Setup Github Actions CI for tests
+- [x] Write tests
+- [x] Setup Github Actions CI for tests
 - [ ] Increase max number of code files that are scannable
 - [ ] Under the output, add support for multiple repos not always overwriting
