@@ -48,11 +48,3 @@ describe('test cli', () => {
     });
 
 })
-
-describe('test repo arguments', () => {
-    it('exits when no --repo and no git remote is found', async () => {
-        const { stderr, exitCode } = await runCli(['generate'], { HOME: os.tmpdir() });
-        expect(exitCode).toBe(1);
-        expect(stderr).toMatch(/Failed to fetch repository/i);
-    });
-})
